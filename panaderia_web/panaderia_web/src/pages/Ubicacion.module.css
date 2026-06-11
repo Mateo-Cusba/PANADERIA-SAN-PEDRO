@@ -1,0 +1,112 @@
+/* src/pages/Ubicacion.module.css */
+.main {
+  padding-top: 72px;
+  min-height: 100vh;
+}
+
+.hero {
+  background: var(--color-cafe);
+  padding: 64px 0 48px;
+  margin-bottom: 56px;
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: var(--color-blanco);
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.sub {
+  color: rgba(255,255,255,0.65);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 48px;
+  align-items: start;
+  padding-bottom: 80px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.infoCard {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  background: var(--color-blanco);
+  border-radius: 6px;
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--color-dorado);
+}
+
+.icon {
+  color: var(--color-tinto);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.infoCard h3 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  margin-bottom: 4px;
+  color: var(--color-cafe);
+}
+
+.infoCard p {
+  font-size: 0.9rem;
+  color: var(--color-cafe);
+  font-weight: 500;
+}
+
+.detail {
+  color: var(--color-gris) !important;
+  font-weight: 400 !important;
+  font-size: 0.85rem !important;
+}
+
+.directions {
+  padding: 24px;
+  background: var(--color-crema-dark);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.directions h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--color-cafe);
+}
+
+.directions p {
+  font-size: 0.92rem;
+  color: var(--color-gris);
+  line-height: 1.6;
+}
+
+.mapWrapper {
+  height: 480px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 100px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mapWrapper {
+    height: 360px;
+    position: static;
+  }
+}

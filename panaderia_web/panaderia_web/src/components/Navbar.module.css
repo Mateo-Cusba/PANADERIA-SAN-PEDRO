@@ -1,0 +1,142 @@
+/* src/components/Navbar.module.css */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 0;
+  background: transparent;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header.scrolled {
+  background: var(--color-cafe);
+  box-shadow: var(--shadow-md);
+}
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-dorado);
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-blanco);
+  letter-spacing: 0.02em;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.link {
+  padding: 8px 16px;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.link:hover {
+  color: var(--color-dorado);
+}
+
+.link.active {
+  color: var(--color-dorado);
+  border-bottom-color: var(--color-dorado);
+}
+
+.ctaMobile {
+  display: none;
+}
+
+.ctaDesktop {
+  flex-shrink: 0;
+}
+
+.hamburger {
+  display: none;
+  background: transparent;
+  color: var(--color-blanco);
+  padding: 4px;
+}
+
+@media (max-width: 768px) {
+  .ctaDesktop {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    z-index: 101;
+  }
+
+  .links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    max-width: 300px;
+    height: 100vh;
+    background: var(--color-cafe);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 100px 32px 40px;
+    gap: 8px;
+    transition: right 0.3s ease;
+    box-shadow: -4px 0 20px rgba(0,0,0,0.3);
+  }
+
+  .links.open {
+    right: 0;
+  }
+
+  .link {
+    font-size: 1.1rem;
+    padding: 12px 0;
+    border-bottom: none;
+    border-left: 3px solid transparent;
+    padding-left: 16px;
+  }
+
+  .link.active {
+    border-bottom: none;
+    border-left-color: var(--color-dorado);
+  }
+
+  .ctaMobile {
+    display: block;
+    margin-top: 16px;
+  }
+}

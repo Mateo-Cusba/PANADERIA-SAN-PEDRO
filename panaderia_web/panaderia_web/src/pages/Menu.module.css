@@ -1,0 +1,121 @@
+/* src/pages/Menu.module.css */
+.main {
+  padding-top: 72px;
+  min-height: 100vh;
+}
+
+.hero {
+  background: var(--color-cafe);
+  padding: 64px 0 48px;
+  margin-bottom: 48px;
+}
+
+.title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  color: var(--color-blanco);
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+.sub {
+  color: rgba(255,255,255,0.7);
+  font-size: 1rem;
+  max-width: 480px;
+}
+
+/* Búsqueda */
+.searchBar {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-gris);
+}
+
+.searchInput {
+  width: 100%;
+  max-width: 480px;
+  padding: 13px 16px 13px 46px;
+  border: 2px solid var(--color-crema-dark);
+  border-radius: 4px;
+  background: var(--color-blanco);
+  font-size: 0.95rem;
+  color: var(--color-cafe);
+  outline: none;
+  transition: border-color var(--transition);
+}
+
+.searchInput:focus {
+  border-color: var(--color-dorado);
+}
+
+.clearBtn {
+  position: absolute;
+  left: 440px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  color: var(--color-gris);
+  padding: 4px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  border-bottom: 2px solid var(--color-crema-dark);
+  padding-bottom: 0;
+}
+
+.tab {
+  padding: 10px 18px;
+  background: transparent;
+  color: var(--color-gris);
+  font-size: 0.88rem;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  border-radius: 0;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.tab:hover {
+  color: var(--color-cafe);
+}
+
+.tabActive {
+  color: var(--color-tinto);
+  border-bottom-color: var(--color-tinto);
+  font-weight: 600;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+  padding-bottom: 80px;
+}
+
+.empty {
+  text-align: center;
+  padding: 80px 0;
+  color: var(--color-gris);
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .searchInput {
+    max-width: 100%;
+  }
+  .clearBtn {
+    left: auto;
+    right: 10px;
+  }
+}

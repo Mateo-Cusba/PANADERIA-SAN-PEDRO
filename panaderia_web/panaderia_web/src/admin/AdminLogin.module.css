@@ -1,0 +1,84 @@
+/* src/admin/AdminLogin.module.css */
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-cafe);
+  padding: 24px;
+}
+
+.card {
+  background: var(--color-blanco);
+  border-radius: 8px;
+  padding: 48px 40px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+}
+
+.logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 20px;
+  border: 3px solid var(--color-dorado);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--color-cafe);
+  margin-bottom: 4px;
+}
+
+.sub {
+  color: var(--color-gris);
+  font-size: 0.88rem;
+  margin-bottom: 32px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  text-align: left;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-cafe);
+  letter-spacing: 0.04em;
+}
+
+.field input {
+  padding: 11px 14px;
+  border: 2px solid var(--color-crema-dark);
+  border-radius: 4px;
+  font-size: 0.95rem;
+  color: var(--color-cafe);
+  outline: none;
+  transition: border-color var(--transition);
+}
+
+.field input:focus {
+  border-color: var(--color-dorado);
+}
+
+.error {
+  font-size: 0.85rem;
+  color: var(--color-tinto);
+  background: #fdf0f0;
+  padding: 10px 14px;
+  border-radius: 4px;
+  border-left: 3px solid var(--color-tinto);
+}

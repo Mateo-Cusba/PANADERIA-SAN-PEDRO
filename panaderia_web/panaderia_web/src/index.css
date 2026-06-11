@@ -1,0 +1,162 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Paleta: Tierra, café y crema bogotana */
+  --color-cafe: #3D1F0D;        /* Café oscuro — textos principales */
+  --color-tinto: #7B2D2D;       /* Rojo tinto — acento primario */
+  --color-dorado: #C9922A;      /* Dorado pan recién horneado — acento secundario */
+  --color-crema: #F5EDD8;       /* Crema suave — fondo principal */
+  --color-crema-dark: #EDE0C4;  /* Crema oscura — hover, bordes */
+  --color-blanco: #FDFAF5;      /* Blanco cálido */
+  --color-gris: #6B5E4E;        /* Gris cálido — texto secundario */
+  --color-gris-claro: #D4C9B5;  /* Gris muy claro — separadores */
+
+  /* Tipografía */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  /* Sombras */
+  --shadow-sm: 0 1px 3px rgba(61,31,13,0.08);
+  --shadow-md: 0 4px 16px rgba(61,31,13,0.12);
+  --shadow-lg: 0 12px 40px rgba(61,31,13,0.16);
+
+  /* Transiciones */
+  --transition: 0.22s ease;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-crema);
+  color: var(--color-cafe);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-body);
+}
+
+input, textarea, select {
+  font-family: var(--font-body);
+}
+
+/* Botones base */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: var(--color-tinto);
+  color: var(--color-blanco);
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.btn-primary:hover {
+  background: #621f1f;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 28px;
+  background: transparent;
+  color: var(--color-tinto);
+  border: 2px solid var(--color-tinto);
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  transition: all var(--transition);
+}
+
+.btn-secondary:hover {
+  background: var(--color-tinto);
+  color: var(--color-blanco);
+}
+
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: var(--color-dorado);
+  color: var(--color-blanco);
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.btn-gold:hover {
+  background: #a87420;
+  transform: translateY(-1px);
+}
+
+/* Sección wrapper */
+.section-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Etiqueta de categoría */
+.badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 2px;
+  background: var(--color-dorado);
+  color: var(--color-blanco);
+}
+
+/* Scrollbar custom */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-crema-dark); }
+::-webkit-scrollbar-thumb { background: var(--color-dorado); border-radius: 3px; }
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.5s ease forwards;
+}
